@@ -5,8 +5,8 @@ function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white">
-      <header className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
+    <div className="min-h-screen bg-slate-50">
+      <header className="fixed top-0 left-0 right-0 bg-slate-50/80 backdrop-blur-md z-50 border-b border-gray-200">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Brain className="w-8 h-8 text-blue-600" />
@@ -31,7 +31,7 @@ function App() {
         </nav>
 
         {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-200 px-4 py-4">
+          <div className="md:hidden bg-slate-50 border-t border-gray-200 px-4 py-4">
             <div className="flex flex-col gap-4">
               <a href="#services" className="text-gray-600 hover:text-gray-900">Services</a>
               <a href="#features" className="text-gray-600 hover:text-gray-900">Features</a>
@@ -83,7 +83,7 @@ function App() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                 <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
                   <Brain className="w-7 h-7 text-blue-600" />
                 </div>
@@ -93,7 +93,7 @@ function App() {
                 </p>
               </div>
 
-              <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                 <div className="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
                   <Zap className="w-7 h-7 text-emerald-600" />
                 </div>
@@ -103,7 +103,7 @@ function App() {
                 </p>
               </div>
 
-              <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                 <div className="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
                   <Shield className="w-7 h-7 text-orange-600" />
                 </div>
