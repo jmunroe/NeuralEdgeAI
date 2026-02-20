@@ -1,4 +1,4 @@
-import { Brain, Sparkles, Zap, Shield, ArrowRight, Menu, X } from 'lucide-react';
+import { Brain, Sparkles, Zap, Shield, ArrowRight, Menu, X, Check } from 'lucide-react';
 import { useState } from 'react';
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
           </div>
 
           <div className="hidden md:flex items-center gap-8">
+            <a href="#pricing" className="text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
             <a href="#services" className="text-gray-600 hover:text-gray-900 transition-colors">Services</a>
             <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">Features</a>
             <a href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
@@ -33,6 +34,7 @@ function App() {
         {mobileMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-200 px-4 py-4">
             <div className="flex flex-col gap-4">
+              <a href="#pricing" className="text-gray-600 hover:text-gray-900">Pricing</a>
               <a href="#services" className="text-gray-600 hover:text-gray-900">Services</a>
               <a href="#features" className="text-gray-600 hover:text-gray-900">Features</a>
               <a href="#contact" className="text-gray-600 hover:text-gray-900">Contact</a>
@@ -67,6 +69,147 @@ function App() {
               <button className="border-2 border-gray-300 text-gray-900 px-8 py-4 rounded-lg hover:border-gray-400 transition-colors font-medium text-lg">
                 Watch Demo
               </button>
+            </div>
+          </div>
+        </section>
+
+        <section id="pricing" className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Simple, Transparent Pricing
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Choose the perfect plan to accelerate your AI journey
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+              <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-gray-300 transition-all hover:shadow-lg">
+                <div className="mb-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Starter</h3>
+                  <p className="text-gray-600">Perfect for small teams getting started with AI</p>
+                </div>
+                <div className="mb-8">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-5xl font-bold text-gray-900">$299</span>
+                    <span className="text-gray-600">/month</span>
+                  </div>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">Up to 10,000 API calls/month</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">5 team members</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">Basic ML models</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">Email support</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">Community access</span>
+                  </li>
+                </ul>
+                <button className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors font-medium">
+                  Get Started
+                </button>
+              </div>
+
+              <div className="bg-blue-600 rounded-2xl p-8 relative hover:shadow-2xl transition-all transform hover:scale-105">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                  <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    Most Popular
+                  </span>
+                </div>
+                <div className="mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">Professional</h3>
+                  <p className="text-blue-100">For growing businesses scaling AI operations</p>
+                </div>
+                <div className="mb-8">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-5xl font-bold text-white">$799</span>
+                    <span className="text-blue-100">/month</span>
+                  </div>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
+                    <span className="text-white">Up to 100,000 API calls/month</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
+                    <span className="text-white">Unlimited team members</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
+                    <span className="text-white">Advanced ML & custom models</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
+                    <span className="text-white">Priority support</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
+                    <span className="text-white">Dedicated account manager</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
+                    <span className="text-white">Custom integrations</span>
+                  </li>
+                </ul>
+                <button className="w-full bg-white text-blue-600 py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors font-medium">
+                  Get Started
+                </button>
+              </div>
+
+              <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-gray-300 transition-all hover:shadow-lg">
+                <div className="mb-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
+                  <p className="text-gray-600">For organizations requiring custom solutions</p>
+                </div>
+                <div className="mb-8">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-5xl font-bold text-gray-900">Custom</span>
+                  </div>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">Unlimited API calls</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">Unlimited team members</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">Custom AI model development</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">24/7 premium support</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">On-premise deployment</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">SLA guarantee</span>
+                  </li>
+                </ul>
+                <button className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors font-medium">
+                  Contact Sales
+                </button>
+              </div>
             </div>
           </div>
         </section>
