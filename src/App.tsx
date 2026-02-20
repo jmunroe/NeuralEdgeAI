@@ -1,12 +1,34 @@
-import { Brain, Sparkles, Zap, Shield, ArrowRight, Menu, X } from 'lucide-react';
+import { Brain, Sparkles, Zap, Shield, ArrowRight, Menu, X, X as CloseIcon } from 'lucide-react';
 import { useState } from 'react';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [bannerOpen, setBannerOpen] = useState(true);
 
   return (
     <div className="min-h-screen bg-white">
-      <header className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
+      {bannerOpen && (
+        <div className="fixed top-0 left-0 right-0 z-[60] bg-gradient-to-r from-blue-600 to-cyan-500 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+            <div className="flex-1">
+              <div className="text-center md:text-left">
+                <p className="font-bold text-lg mb-1">Special Event: February 20/27, 2026</p>
+                <p className="text-sm opacity-90">
+                  Session 1: Bolt-Authored Website with Multiple • Session 2: Lovable Web App Wrapping a MindStudio Agent
+                </p>
+              </div>
+            </div>
+            <button
+              onClick={() => setBannerOpen(false)}
+              className="flex-shrink-0 ml-4 p-1 hover:bg-white/20 rounded transition-colors"
+              aria-label="Close banner"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      )}
+      <header className={`fixed left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-gray-200 transition-all ${bannerOpen ? 'top-20' : 'top-0'}`}>
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Brain className="w-8 h-8 text-blue-600" />
@@ -44,7 +66,7 @@ function App() {
         )}
       </header>
 
-      <main className="pt-20">
+      <main className={`transition-all ${bannerOpen ? 'pt-40' : 'pt-20'}`}>
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
