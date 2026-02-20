@@ -1,12 +1,40 @@
-import { Brain, Sparkles, Zap, Shield, ArrowRight, Menu, X } from 'lucide-react';
+import { Brain, Sparkles, Zap, Shield, ArrowRight, Menu, X, Calendar, X as CloseIcon } from 'lucide-react';
 import { useState } from 'react';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [bannerVisible, setBannerVisible] = useState(true);
 
   return (
     <div className="min-h-screen bg-white">
-      <header className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
+      {bannerVisible && (
+        <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-3 px-4 relative z-50">
+          <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+            <div className="flex items-center gap-3 flex-1 justify-center md:justify-start">
+              <Calendar className="w-5 h-5 flex-shrink-0" />
+              <p className="text-sm md:text-base font-medium">
+                <span className="font-bold">Special Training Session</span> - January 20: Using GitHub and Bolt
+              </p>
+              <button className="hidden md:inline-flex bg-white text-orange-600 px-4 py-1.5 rounded-md text-sm font-semibold hover:bg-orange-50 transition-colors ml-4">
+                Register Now
+              </button>
+            </div>
+            <button
+              onClick={() => setBannerVisible(false)}
+              className="text-white hover:text-orange-100 transition-colors"
+              aria-label="Close banner"
+            >
+              <CloseIcon className="w-5 h-5" />
+            </button>
+          </div>
+          <div className="md:hidden mt-2 text-center">
+            <button className="bg-white text-orange-600 px-4 py-1.5 rounded-md text-sm font-semibold hover:bg-orange-50 transition-colors">
+              Register Now
+            </button>
+          </div>
+        </div>
+      )}
+      <header className={`fixed left-0 right-0 bg-white/80 backdrop-blur-md z-40 border-b border-gray-200 transition-all ${bannerVisible ? 'top-[88px] md:top-[52px]' : 'top-0'}`}>
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Brain className="w-8 h-8 text-blue-600" />
@@ -44,7 +72,7 @@ function App() {
         )}
       </header>
 
-      <main className="pt-20">
+      <main className={`transition-all ${bannerVisible ? 'pt-[168px] md:pt-[132px]' : 'pt-20'}`}>
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
