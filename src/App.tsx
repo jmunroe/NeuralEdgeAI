@@ -52,8 +52,8 @@ function App() {
               Transforming Business with AI
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-              Intelligence at the
-              <span className="text-blue-600"> Speed of Thought</span>
+              Think Faster.
+              <span className="text-blue-600"> Act Smarter.</span>
             </h1>
             <p className="text-xl text-gray-600 mb-10 leading-relaxed">
               Unlock the full potential of artificial intelligence for your business.
